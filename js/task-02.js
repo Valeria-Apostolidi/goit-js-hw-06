@@ -17,7 +17,7 @@ const newIngredients = ingredients.map((ingredient) => {
 });
 
 // const newIngredient = ingredients.map(
-//   (ingredient) => `<li class = item>${ingredient}</li>`
+//   (ingredient) => `<li class = "item">${ingredient}</li>`
 // );
 // list.insertAdjacentHTML("beforeend", newIngredient);
 // console.log(newIngredient);
