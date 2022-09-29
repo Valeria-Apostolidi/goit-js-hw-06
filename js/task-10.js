@@ -10,6 +10,7 @@ const mainDiv = document.querySelector("#boxes");
 createBtn.addEventListener("click", createBoxes);
 
 let value = 3;
+const allDiv = [];
 
 function createBoxes() {
   for (let i = 1; i <= input.value; i += 1) {
@@ -19,14 +20,12 @@ function createBoxes() {
     div.style.width = value * 10 + "px";
     div.style.height = value * 10 + "px";
     div.style.backgroundColor = getRandomHexColor();
-    mainDiv.append(div);
-
+    allDiv.push(div);
     console.log(div);
   }
+  mainDiv.append(...allDiv);
 }
 
 destroyBtn.addEventListener("click", () => {
-  const div = document.querySelector(".box");
-  div.remove();
-  console.log(mainDiv);
+  mainDiv.innerHTML = "";
 });
